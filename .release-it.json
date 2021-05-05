@@ -1,7 +1,5 @@
 {
   "git": {
-    "commitArgs": "-s",
-    "tagArgs": "-s",
     "commitMessage": "${version}",
     "tagName": "v${version}"
   },
