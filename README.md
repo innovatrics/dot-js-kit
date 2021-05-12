@@ -63,3 +63,7 @@ customisationType = {
 };
 ```
 All properties in this type are optional, if a property is not present, default value will be used.
+
+## Demo
+
+to run the demo, just unpack the compiled .tgz and then run `npx http-server dist/` in the unpacked `package` folder
