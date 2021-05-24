@@ -35,6 +35,11 @@ if (mountElement == null) {
   throw new Error('#app div not found :(');
 }
 
+type Resolution = {
+  width: number;
+  height: number;
+};
+
 type Props = {
   imageType: 'png' | 'jpg';
   cameraFacing: 'user' | 'environment';
@@ -42,7 +47,7 @@ type Props = {
   isLandscape: boolean;
   landscapeMask: string;
   portraitMask: string;
-  photoTakenCb: (data: string) => void;
+  photoTakenCb: (data: string, resolution: Resolution) => void;
 };
 
 // https://css-tricks.com/3-approaches-to-integrate-react-with-custom-elements/
@@ -65,7 +70,7 @@ const Page = () => {
   const [facing, setFacing] = useState('user' as FacingMode);
   const [imageTaken, setImage] = useState<Blob>((null as unknown) as Blob);
 
-  const handleFacePhotoTaken = async (image: string) => {
+  const handleFacePhotoTaken = async (image: string, resolution: Resolution) => {
     const res = await fetch(image);
     const blob = await res.blob();
 
@@ -73,10 +78,10 @@ const Page = () => {
 
     setShowing('imageData');
 
-    console.log('photo taken');
+    console.log('photo taken with resolution: ', resolution);
   };
 
-  const handleDocumentPhotoTaken = async (image: string) => {
+  const handleDocumentPhotoTaken = async (image: string, resolution: Resolution) => {
     const res = await fetch(image);
     const blob = await res.blob();
 
@@ -84,7 +89,7 @@ const Page = () => {
 
     setShowing('imageData');
 
-    console.log('photo taken');
+    console.log('photo taken with resolution: ', resolution);
   };
 
   const uiCustomisation: customisationType = {

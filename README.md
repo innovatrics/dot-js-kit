@@ -11,17 +11,20 @@ If present, the video feed will be also rendered with an overlay mask. Component
 Pressing the button captures the image from the media stream and returns it in the required format as blob.
 
 ### Known supported browsers
+
 This component was tested with:
-* Chrome on desktop (Windows and Linux)
-* Firefox on desktop (Windows and Linux)
-* Chrome on Android
-* Firefox on Android
-* Safari on iPhone*
+
+- Chrome on desktop (Windows and Linux)
+- Firefox on desktop (Windows and Linux)
+- Chrome on Android
+- Firefox on Android
+- Safari on iPhone\*
 
 ### Known issues
-* currently the video feed does not react properly to rotation of mobile from landscape to portrait
-* the component does not work with Chrome (or other browsers) on iPhone as iOS does not provide camera access to other browsers than Safari
-* the responsivity has issues with Safari on iOS if it is reloaded more times within the same page
+
+- currently the video feed does not react properly to rotation of mobile from landscape to portrait
+- the component does not work with Chrome (or other browsers) on iPhone as iOS does not provide camera access to other browsers than Safari
+- the responsivity has issues with Safari on iOS if it is reloaded more times within the same page
 
 ## Properties
 
@@ -31,24 +34,44 @@ cameraOptions: {
   cameraFacing: 'environment' | 'user';
   landscapeMask?: string;
   portraitMask?: string;
-  photoTakenCb: (image: string) => void;
+  photoTakenCb: (image: string, resolution: {
+    width: number,
+    height: number
+  }) => void;
+  onError: (error: Error) => void;
   uiCustomisation: customisationType;
 }
 ```
 
 ### cameraOptions
+
 object: passes the properties to the component
+
 ### imageType
+
 `jpg` or `png`: property that tells the component image type of the picture captured, defaults to png
+
 ### cameraFacing
+
 `user` or `environment`: property that tells the component which camera to acquire from browser getUserMedia API, if there is no camera with chosen facing, browser may return a different facing camera. `user` refers to front-facing camera, `environment` means back-facing camera.
+
 ### landscapeMask
+
 SVG image: optional property that passes the overlay mask to use when device is in landscape mode. If none is provided, no mask will be shown in landscape mode.
+
 ### portraitMask
+
 SVG image: optional property that passes the overlay mask to use when device is in portrait mode. If none is provided, no mask will be shown in portrait mode.
+
 ### photoTakenCb
-function: Callback that takes a single string argument, this function will be called when the component captures a picture, the argument `image` will contain a dataUri to the Blob of the image.
+
+function: Callback that takes a two arguments, this function will be called when the component captures a picture.
+
+- the argument `image` will contain a dataUri to the Blob of the image.
+- the argument `resolution` will contain object describing width and height of the captured picture.
+
 ### uiCustomisation
+
 customisationType: property that lets integrator customise theming of the component, currently supports changing colors used.
 
 ### customisationType
@@ -62,6 +85,13 @@ customisationType = {
   };
 };
 ```
+
+### onError
+
+function: Callback that takes one argument. if set this function will be called when camera initialization failed
+
+- the argument `error` will contain error object with message, why initialization failed.
+
 All properties in this type are optional, if a property is not present, default value will be used.
 
 ## Demo
