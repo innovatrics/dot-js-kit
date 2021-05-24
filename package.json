@@ -2,5 +2,5 @@
   "dependencies": {
     "release-it": "^14.6.1"
   },
-  "version": "1.0.7"
+  "version": "1.0.8"
 }
