@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+    <path id="mask" fill="#FFFFFF" opacity="0.6" fill-rule="evenodd"
+        d="M0,0 L800,0 L800,600 L0,600 L0,0 Z M400,464 C494.440692,464 571,387.440692 571,293 C571,198.559308 494.440692,122 400,122 C305.559308,122 229,198.559308 229,293 C229,387.440692 305.559308,464 400,464 Z" />
+    <circle id="outline" fill="none" stroke="#FFFFFF" cx="400" cy="293" r="171" />
+</svg>

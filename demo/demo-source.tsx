@@ -5,7 +5,7 @@ import LandscapeFaceMask from './components/img/mask_face_lndscp.svg';
 import PortraitFaceMask from './components/img/mask_face_prtr.svg';
 import LandscapeDocumentMask from './components/img/mask_card_lndscp.svg';
 import PortraitDocumentMask from './components/img/mask_card_prtr.svg';
-import './main';
+import './main'; // imports the <x-dot-manual-capture> tag
 
 declare module 'preact/src/jsx' {
   //TODO: fix the type declaration, should probably be a part of the element itself.
@@ -15,7 +15,7 @@ declare module 'preact/src/jsx' {
 
     interface IntrinsicElements {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      'x-face-capture': any; // HTMLAttributes<FaceCaptureElement>;
+      'x-dot-manual-capture': any; // HTMLAttributes<FaceCaptureElement>;
     }
 
     interface FaceCaptureElement extends HTMLElement {
@@ -56,12 +56,12 @@ type Props = {
 // https://reactjs.org/docs/web-components.html
 const FaceCamera: FunctionalComponent<Props> = (props: Props) => {
   console.log('demo face camera props: ', props);
-  return <x-face-capture cameraOptions={props} />;
+  return <x-dot-manual-capture cameraOptions={props} />;
 };
 
 const DocumentCamera: FunctionalComponent<Props> = (props: Props) => {
   console.log('demo document camera props: ', props);
-  return <x-face-capture cameraOptions={props} />;
+  return <x-dot-manual-capture cameraOptions={props} />;
 };
 
 const Page = () => {

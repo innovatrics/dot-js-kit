@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1860" width="800" height="1860">
+    <path id="mask" fill="#FFFFFF" opacity="0.6" fill-rule="evenodd" d="M0,0 L800,0 L800,1860 L0,1860 L0,0 Z M142,766 L658,766 C659.104569,766 660,766.895431 660,768 L660,1092 C660,1093.104569 659.104569,1094 658,1094 L142,1094 C140.895431,1094 140,1093.104569 140,1092 L140,768 C140,766.895431 140.895431,766 142,766 Z" />
+    <rect id="outline" fill="none" stroke="#FFFFFF" x="139.5" y="765.5" width="521" height="329" rx="2" />
+</svg>
