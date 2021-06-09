@@ -97,3 +97,8 @@ All properties in this type are optional, if a property is not present, default 
 ## Demo
 
 to run the demo, just unpack the compiled .tgz and then run `npx http-server dist/` in the unpacked `package` folder
+
+
+## Integration
+
+to integrate the library, in `package.json` add line: `"dot-manual-capture": "https://github.com/innovatrics/dot-js-kit/releases/download/{VERSION}/dot-manual-capture-lib.tgz",` (where `{VERSION}` is the lib version you are integrating) to `dependecies`. This installs dot-manual-capture as an external module that you can then use just like any other module in your code (so for example you could do `import 'dot-manual-capture';` in your app). Example of this integration is in `demo-source.tsx`

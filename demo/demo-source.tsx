@@ -1,11 +1,11 @@
 import { h, render, FunctionalComponent } from 'preact';
-import { useState } from 'preact/hooks';
+import { useState, useRef, useEffect } from 'preact/hooks';
 import { customisationType } from './theme';
 import LandscapeFaceMask from './components/img/mask_face_lndscp.svg';
 import PortraitFaceMask from './components/img/mask_face_prtr.svg';
 import LandscapeDocumentMask from './components/img/mask_card_lndscp.svg';
 import PortraitDocumentMask from './components/img/mask_card_prtr.svg';
-import './main'; // imports the <x-dot-manual-capture> tag
+import 'dot-manual-capture'; // imports the <x-dot-manual-capture> tag
 
 declare module 'preact/src/jsx' {
   //TODO: fix the type declaration, should probably be a part of the element itself.
@@ -19,14 +19,27 @@ declare module 'preact/src/jsx' {
     }
 
     interface FaceCaptureElement extends HTMLElement {
-      imageType: 'png' | 'jpg';
-      cameraFacing: 'user' | 'environment';
-      landscapeMask: string;
-      portraitMask: string;
-      photoTakenCb: (image: string) => void;
+      imageType: 'jpg' | 'png';
+      cameraFacing: 'environment' | 'user';
+      landscapeMask?: string;
+      portraitMask?: string;
+      photoTakenCb: (image: string, resolution: Resolution) => void;
+      onError?: (e: Error) => void;
       uiCustomisation: customisationType;
     }
   }
+}
+
+interface FaceCaptureElement extends HTMLElement {
+  cameraOptions?: {
+    imageType: 'jpg' | 'png';
+    cameraFacing: 'environment' | 'user';
+    landscapeMask?: string;
+    portraitMask?: string;
+    photoTakenCb: (image: string, resolution: Resolution) => void;
+    onError?: (e: Error) => void;
+    uiCustomisation: customisationType;
+  };
 }
 
 const mountElement = document.querySelector('#app');
@@ -41,13 +54,13 @@ type Resolution = {
 };
 
 type Props = {
-  imageType: 'png' | 'jpg';
-  cameraFacing: 'user' | 'environment';
+  imageType: 'jpg' | 'png';
+  cameraFacing: 'environment' | 'user';
+  landscapeMask?: string;
+  portraitMask?: string;
+  photoTakenCb: (image: string, resolution: Resolution) => void;
+  onError?: (e: Error) => void;
   uiCustomisation: customisationType;
-  isLandscape: boolean;
-  landscapeMask: string;
-  portraitMask: string;
-  photoTakenCb: (data: string, resolution: Resolution) => void;
 };
 
 // https://css-tricks.com/3-approaches-to-integrate-react-with-custom-elements/
@@ -55,13 +68,57 @@ type Props = {
 // https://www.robinwieruch.de/react-web-components
 // https://reactjs.org/docs/web-components.html
 const FaceCamera: FunctionalComponent<Props> = (props: Props) => {
+  const cameraRef = useRef<FaceCaptureElement | null>(null);
+
   console.log('demo face camera props: ', props);
-  return <x-dot-manual-capture cameraOptions={props} />;
+  const { uiCustomisation, photoTakenCb, landscapeMask, portraitMask, ...rest } = props;
+
+  useEffect(() => {
+    const { current } = cameraRef;
+
+    if (current === null) {
+      return;
+    }
+
+    const cam = {
+      ...rest,
+      uiCustomisation,
+      photoTakenCb,
+      landscapeMask,
+      portraitMask,
+    };
+
+    current.cameraOptions = cam;
+  });
+
+  return <x-dot-manual-capture ref={cameraRef} />;
 };
 
 const DocumentCamera: FunctionalComponent<Props> = (props: Props) => {
+  const cameraRef = useRef<FaceCaptureElement | null>(null);
+
   console.log('demo document camera props: ', props);
-  return <x-dot-manual-capture cameraOptions={props} />;
+  const { uiCustomisation, photoTakenCb, landscapeMask, portraitMask, ...rest } = props;
+
+  useEffect(() => {
+    const { current } = cameraRef;
+
+    if (current === null) {
+      return;
+    }
+
+    const cam = {
+      ...rest,
+      uiCustomisation,
+      photoTakenCb,
+      landscapeMask,
+      portraitMask,
+    };
+
+    current.cameraOptions = cam;
+  });
+
+  return <x-dot-manual-capture ref={cameraRef} />;
 };
 
 const Page = () => {
@@ -136,7 +193,6 @@ const Page = () => {
           </select>
           <FaceCamera
             imageType="png"
-            isLandscape={false}
             cameraFacing={facing}
             uiCustomisation={uiCustomisation}
             photoTakenCb={handleFacePhotoTaken}
@@ -147,7 +203,6 @@ const Page = () => {
       ) : showing == 'document' ? (
         <DocumentCamera
           imageType="png"
-          isLandscape
           cameraFacing={'environment'}
           uiCustomisation={uiCustomisation}
           photoTakenCb={handleDocumentPhotoTaken}
