@@ -1,7 +1,7 @@
 {
   "git": {
     "commitMessage": "${version}",
-    "tagName": "v${version}"
+    "tagName": "${version}"
   },
   "npm": {
     "publish": false,
@@ -13,7 +13,7 @@
   },
   "github": {
     "release": true,
-    "releaseName": "v${version}",
+    "releaseName": "${version}",
     "preRelease": false,
     "draft": false,
     "tokenRef": "GITHUB_TOKEN",
