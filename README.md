@@ -1,6 +1,6 @@
 ## Documentation
 
-to read the official documentation go to followign links
+to read the official documentation go to following links
  
 ### Face Auto Capture Component
 
