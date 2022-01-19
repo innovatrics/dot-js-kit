@@ -7,8 +7,8 @@
     "publish": true,
     "publishPath": ".",
     "tag": "latest",
-    "private": false,
-    "access": null,
+    "private": true,
+    "access": "public",
     "otp": null
   },
   "github": {

@@ -1,4 +1,5 @@
 {
+  "name": "@innovatrics/dot-face-capture",
   "dependencies": {
     "release-it": "^14.6.1"
   },
