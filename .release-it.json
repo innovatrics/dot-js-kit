@@ -17,7 +17,7 @@
     "preRelease": false,
     "draft": false,
     "tokenRef": "GITHUB_TOKEN",
-    "assets": ["lib/*.tgz", "lib/**/*.json", "lib/**/*.bin", "lib/*.wasm", "demo/*.tgz"],
+    "assets": ["lib/*.tgz", "lib/*.wasm", "demo/*.tgz"],
     "host": null,
     "timeout": 0,
     "proxy": false
