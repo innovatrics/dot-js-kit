@@ -9,3 +9,11 @@ To integrate the library see the [docs](https://developers.innovatrics.com/digit
 ### Document Auto Capture Component
 
 To integrate the library see the [docs](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-document/latest/documentation/).
+
+### MagnifEye Liveness Component
+
+To integrate the library see the [docs](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-magnifeye-liveness/latest/documentation/).
+
+### Smile Liveness Component
+
+To integrate the library see the [docs](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-smile-liveness/latest/documentation/)
