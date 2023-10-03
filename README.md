@@ -16,4 +16,4 @@ To integrate the library see the [docs](https://developers.innovatrics.com/digit
 
 ### Smile Liveness Component
 
-To integrate the library see the [docs](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-smile-liveness/latest/documentation/)
+To integrate the library see the [docs](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-smile-liveness/latest/documentation/).
