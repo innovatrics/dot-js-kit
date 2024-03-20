@@ -1,19 +1,201 @@
-## Documentation
+# Face and Document Capture Web Components
 
-to read the official documentation go to following links
- 
+This repository is a collection of web components for face and/or ID document photo capture with usage instructions for easy implementation into your application.
+
+The repository contains the following Innovatrics DOT web components:
+
+- Face Auto Capture Component
+- Document Auto Capture Component
+- MagnifEye Liveness Component
+- Smile Liveness Component
+- Auto Capture UI Component
+
+The components can be used to develop remote identity verification or digital onboarding solutions, as demonstrated in this [demo application](https://dot.innovatrics.com/).
+
+You can also check out the [integration samples](https://github.com/innovatrics/dot-web-samples) in various technologies (React, Vue, Angular, jQuery).
+
+## Features
+
+The output of all the components is one or more face / document image(s) in the JPEG format and/or a proprietary file format for safe transfer to [Digital Identity Service](https://developers.innovatrics.com/digital-onboarding/technical/api-reference/) on server for further processing.
+
 ### Face Auto Capture Component
 
-To integrate the library see the [docs](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-face/latest/documentation/).
+[Innovatrics Face Auto Capture Component](https://www.npmjs.com/package/@innovatrics/dot-face-auto-capture) renders the video stream from an available phone or web camera to automatically capture an image of a user’s face with the required quality.
+
+<p align="center">
+  <img alt="Face Auto Capture" src="https://www.innovatrics.com/wp-content/uploads/2021/08/Passive-Liveness-preview-1.gif">
+</p>
 
 ### Document Auto Capture Component
 
-To integrate the library see the [docs](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-document/latest/documentation/).
+[Innovatrics Document Auto Capture Component](https://www.npmjs.com/package/@innovatrics/dot-document-auto-capture) renders the video stream from an available phone or web camera to automatically capture an image of an ID document with the required quality.
+
+<p align="center">
+  <img alt="Document Auto Capture" src="https://www.innovatrics.com/wp-content/uploads/2021/08/Onboarding-document-scanning-V2-1.gif">
+</p>
 
 ### MagnifEye Liveness Component
 
-To integrate the library see the [docs](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-magnifeye-liveness/latest/documentation/).
+[Innovatrics MagnifEye Liveness Component](https://www.npmjs.com/package/@innovatrics/dot-magnifeye-liveness) renders the video stream from an available phone or web camera to automatically capture a detailed image of a user’s face and their eye with the required quality. The component lays the foundation for a semi-passive liveness capture capability.
+
+<p align="center">
+  <img alt="MagnifEye Liveness Component" src="https://www.innovatrics.com/wp-content/uploads/2023/03/MagnifEye-liveness.gif">
+</p>
 
 ### Smile Liveness Component
 
-To integrate the library see the [docs](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-smile-liveness/latest/documentation/).
+[Innovatrics Smile Liveness Component](https://www.npmjs.com/package/@innovatrics/dot-smile-liveness) renders the video stream from an available phone or web camera to automatically capture two images of a user’s face with the required quality. The component lays the foundation for a semi-passive liveness capture capability.
+
+<p align="center">
+  <img alt="Smile Liveness Component" src="https://www.innovatrics.com/wp-content/uploads/2022/06/Smile-liveness-V2.gif">
+</p>
+
+### Auto Capture UI Component
+
+[Innovatrics Auto Capture UI Component](https://www.npmjs.com/package/@innovatrics/dot-auto-capture-ui) renders an overlay over the video stream. The overlay includes a placeholder, camera control buttons and instructions to guide the user to position their face or their ID document correctly. It is recommended to be used with other components mentioned above.
+
+## Requirements
+
+Before using any of the components that are available in this repository, beware of the following requirements:
+
+### UI Component
+
+**IMPORTANT:** For the auto capture and liveness components to work as intended, we highly recommend you also have [Auto Capture UI Component](https://www.npmjs.com/package/@innovatrics/dot-auto-capture-ui) installed in your project. You can learn more about why this is important on our [developers portal](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-face/latest/documentation/).
+
+### Camera requirements
+
+To get appropriate results using this component, the camera resolution on your device needs to be at least 720x720 pixels.
+
+Supported browsers
+The Face Auto Capture Component was tested with Chrome, Firefox, Edge, Safari, SafariVC, WebView and WKWebView. More information can be found [here](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-face/latest/documentation/#_supported_browsers).
+
+## Installation
+
+Installation of the components is available via NPM, PNPM or Yarn:
+
+### Face Auto Capture Component
+
+Using npm:
+
+```bash
+$ npm install @innovatrics/dot-face-auto-capture
+```
+
+Using yarn:
+
+```bash
+$ yarn add @innovatrics/dot-face-auto-capture
+```
+
+Using pnpm:
+
+```bash
+$ pnpm add @innovatrics/dot-face-auto-capture
+```
+
+### Document Auto Capture Component
+
+Using npm:
+
+```bash
+$ npm install @innovatrics/dot-document-auto-capture
+```
+
+Using yarn:
+
+```bash
+$ yarn add @innovatrics/dot-document-auto-capture
+```
+
+Using pnpm:
+
+```bash
+$ pnpm add @innovatrics/dot-document-auto-capture
+```
+
+### MagnifEye Liveness Component
+
+Using npm:
+
+```bash
+$ npm install @innovatrics/dot-magnifeye-liveness
+```
+
+Using yarn:
+
+```bash
+$ yarn add @innovatrics/dot-magnifeye-liveness
+```
+
+Using pnpm:
+
+```bash
+$ pnpm add @innovatrics/dot-magnifeye-liveness
+```
+
+### Smile Liveness Component
+
+Using npm:
+
+```bash
+$ npm install @innovatrics/dot-smile-liveness
+```
+
+Using yarn:
+
+```bash
+$ yarn add @innovatrics/dot-smile-liveness
+```
+
+Using pnpm:
+
+```bash
+$ pnpm add @innovatrics/dot-smile-liveness
+```
+
+### Auto Capture UI Component
+
+Using npm:
+
+```bash
+$ npm install @innovatrics/dot-auto-capture-ui
+```
+
+Using yarn:
+
+```bash
+$ yarn add @innovatrics/dot-auto-capture-ui
+```
+
+Using pnpm:
+
+```bash
+$ pnpm add @innovatrics/dot-auto-capture-ui
+```
+
+## Usage
+
+The following components are [web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) which use custom HTML tag.
+Properties need to be passed into the component after the tag was rendered.
+
+To learn more about the initial setup and usage of the components, head to the following developer portal pages:
+
+- [Face Auto Capture Component developer portal](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-face/latest/documentation/#_usage)
+- [Document Auto Capture Component developer portal](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-document/latest/documentation/#_usage)
+- [MagnifEye Liveness Component developer portal](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-magnifeye-liveness/latest/documentation/#_usage)
+- [Smile Liveness Component developer portal](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-smile-liveness/latest/documentation/#_usage)
+
+## Changelogs
+
+- [Face Auto Capture Component changelog](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-face/latest/documentation/#_changelog)
+- [Document Auto Capture Component changelog](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-document/latest/documentation/#_changelog)
+- [MagnifEye Liveness Component changelog](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-magnifeye-liveness/latest/documentation/#_changelog)
+- [Smile Liveness Component changelog](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-smile-liveness/latest/documentation/#_changelog)
+
+## License
+
+The following components are available under Innovatrics proprietary license (see License tab to read the T&C).
+
+The components can be used in a freemium mode without a license agreement. However, please note that the free version includes a watermark overlay in the components.
+
+To obtain a license agreement and use the component without the overlay, please contact us at support@innovatrics.com.
