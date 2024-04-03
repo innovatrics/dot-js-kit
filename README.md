@@ -23,7 +23,7 @@ The output of all the components is one or more face / document image(s) in the 
 [Innovatrics Face Auto Capture Component](https://www.npmjs.com/package/@innovatrics/dot-face-auto-capture) renders the video stream from an available phone or web camera to automatically capture an image of a user’s face with the required quality.
 
 <p align="center">
-  <img alt="Face Auto Capture" src="https://www.innovatrics.com/wp-content/uploads/2021/08/Passive-Liveness-preview-1.gif">
+  <img alt="Face Auto Capture" src="https://www.innovatrics.com/wp-content/uploads/2024/03/Passive-Liveness-preview-400px.gif">
 </p>
 
 ### Document Auto Capture Component
@@ -31,7 +31,7 @@ The output of all the components is one or more face / document image(s) in the 
 [Innovatrics Document Auto Capture Component](https://www.npmjs.com/package/@innovatrics/dot-document-auto-capture) renders the video stream from an available phone or web camera to automatically capture an image of an ID document with the required quality.
 
 <p align="center">
-  <img alt="Document Auto Capture" src="https://www.innovatrics.com/wp-content/uploads/2021/08/Onboarding-document-scanning-V2-1.gif">
+  <img alt="Document Auto Capture" src="https://www.innovatrics.com/wp-content/uploads/2024/03/Onboarding-document-scanning-400px.gif">
 </p>
 
 ### MagnifEye Liveness Component
@@ -39,7 +39,7 @@ The output of all the components is one or more face / document image(s) in the 
 [Innovatrics MagnifEye Liveness Component](https://www.npmjs.com/package/@innovatrics/dot-magnifeye-liveness) renders the video stream from an available phone or web camera to automatically capture a detailed image of a user’s face and their eye with the required quality. The component lays the foundation for a semi-passive liveness capture capability.
 
 <p align="center">
-  <img alt="MagnifEye Liveness Component" src="https://www.innovatrics.com/wp-content/uploads/2023/03/MagnifEye-liveness.gif">
+  <img alt="MagnifEye Liveness Component" src="https://www.innovatrics.com/wp-content/uploads/2024/03/MagnifEye_liveness-preview-400px.gif">
 </p>
 
 ### Smile Liveness Component
@@ -47,7 +47,7 @@ The output of all the components is one or more face / document image(s) in the 
 [Innovatrics Smile Liveness Component](https://www.npmjs.com/package/@innovatrics/dot-smile-liveness) renders the video stream from an available phone or web camera to automatically capture two images of a user’s face with the required quality. The component lays the foundation for a semi-passive liveness capture capability.
 
 <p align="center">
-  <img alt="Smile Liveness Component" src="https://www.innovatrics.com/wp-content/uploads/2022/06/Smile-liveness-V2.gif">
+  <img alt="Smile Liveness Component" src="https://www.innovatrics.com/wp-content/uploads/2024/03/Smile-liveness-preview-400px.gif">
 </p>
 
 ### Auto Capture UI Component
