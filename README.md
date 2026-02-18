@@ -6,6 +6,7 @@ The repository contains the following Innovatrics DOT web components:
 
 - Face Auto Capture Component
 - Document Auto Capture Component
+- Multi-Range Liveness Component
 - Palm Auto Capture Component
 - MagnifEye Liveness Component
 - Smile Liveness Component
@@ -33,6 +34,14 @@ The output of all the components is one or more face / document / palm image(s) 
 
 <p align="center">
   <img alt="Document Auto Capture" src="https://www.innovatrics.com/wp-content/uploads/2024/03/Onboarding-document-scanning-400px.gif" width="200" height="400">
+</p>
+
+### Multi-Range Liveness Component
+
+[Innovatrics Multi-Range Liveness Component](https://www.npmjs.com/package/@innovatrics/dot-multi-range-liveness) renders the video stream from an available phone or web camera to automatically capture multiple images of a user’s face in random distances with the required quality. The component lays the foundation for an active liveness capture capability.
+
+<p align="center">
+  <img alt="Multi-Range Liveness" src="https://www.innovatrics.com/wp-content/uploads/2025/12/multirange_resized.gif" width="200" height="400">
 </p>
 
 ### Palm Capture Component
@@ -122,6 +131,27 @@ Using pnpm:
 $ pnpm add @innovatrics/dot-document-auto-capture
 ```
 
+### Multi-Range Liveness Component
+
+Using npm:
+
+```bash
+$ npm install @innovatrics/dot-multi-range-liveness
+```
+
+Using yarn:
+
+```bash
+$ yarn add @innovatrics/dot-multi-range-liveness
+```
+
+Using pnpm:
+
+```bash
+$ pnpm add @innovatrics/dot-multi-range-liveness
+```
+
+
 ### Palm Auto Capture Component
 
 ```bash
@@ -209,6 +239,7 @@ To learn more about the initial setup and usage of the components, head to the f
 
 - [Face Auto Capture Component developer portal](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-face/latest/documentation/#_usage)
 - [Document Auto Capture Component developer portal](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-document/latest/documentation/#_usage)
+- [Multi-Range Liveness Component developer portal](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-multi-range-liveness/latest/documentation/#_usage)
 - [Palm Capture Component developer portal](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-palm/latest/documentation/)
 - [MagnifEye Liveness Component developer portal](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-magnifeye-liveness/latest/documentation/#_usage)
 - [Smile Liveness Component developer portal](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-smile-liveness/latest/documentation/#_usage)
@@ -217,6 +248,7 @@ To learn more about the initial setup and usage of the components, head to the f
 
 - [Face Auto Capture Component changelog](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-face/latest/documentation/#_changelog)
 - [Document Auto Capture Component changelog](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-document/latest/documentation/#_changelog)
+- [Multi-Range Liveness Component changelog](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-multi-range-liveness/latest/documentation/#_changelog)
 - [Palm Auto Capture Component changelog](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-palm/latest/documentation/#_changelog)
 - [MagnifEye Liveness Component changelog](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-magnifeye-liveness/latest/documentation/#_changelog)
 - [Smile Liveness Component changelog](https://developers.innovatrics.com/digital-onboarding/technical/remote/dot-web-smile-liveness/latest/documentation/#_changelog)
