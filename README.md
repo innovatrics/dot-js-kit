@@ -12,7 +12,7 @@ The repository contains the following Innovatrics DOT web components:
 - Smile Liveness Component
 - Auto Capture UI Component
 
-The components can be used to develop remote identity verification or digital onboarding solutions, as demonstrated in this [demo application](https://dot.innovatrics.com/).
+The components can be used to develop remote identity verification or digital onboarding solutions, as demonstrated in this [demo application](https://idv.innovatrics.com/).
 
 You can also check out the [integration samples](https://github.com/innovatrics/dot-web-samples) in various technologies (React, Vue, Angular, jQuery).
 
@@ -153,6 +153,8 @@ $ pnpm add @innovatrics/dot-multi-range-liveness
 
 
 ### Palm Auto Capture Component
+
+Using npm:
 
 ```bash
 $ npm install @innovatrics/dot-palm-capture
