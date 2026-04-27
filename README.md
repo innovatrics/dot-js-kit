@@ -2,7 +2,7 @@
 
 This repository is a collection of web components for face, ID document or palm photo capture with usage instructions for easy implementation into your application.
 
-The repository contains the following Innovatrics DOT web components:
+The repository contains the following Innovatrics IDV web components:
 
 - Face Auto Capture Component
 - Document Auto Capture Component
