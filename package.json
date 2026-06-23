@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "release-it": "^14.6.1"
+    "release-it": "^20.2.0"
   },
   "version": "8.1.1"
 }
