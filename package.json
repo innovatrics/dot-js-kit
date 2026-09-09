@@ -2,5 +2,25 @@
   "dependencies": {
     "release-it": "^20.2.0"
   },
-  "version": "8.2.0"
+  "version": "8.2.0",
+  "overrides": {
+    "ip-address": {
+      "ip-address": "10.3.1"
+    },
+    "pac-proxy-agent": {
+      "ip-address": "10.3.1"
+    },
+    "proxy-agent": {
+      "ip-address": "10.3.1"
+    },
+    "release-it": {
+      "ip-address": "10.3.1"
+    },
+    "socks": {
+      "ip-address": "10.3.1"
+    },
+    "socks-proxy-agent": {
+      "ip-address": "10.3.1"
+    }
+  }
 }
